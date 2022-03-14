@@ -49,7 +49,7 @@ const Wrapper = styled.section`
     width: 100%;
   }
   p {
-    margin-top: 0.6rem;
+    padding-top: 0.6rem;
     font-size: 0.9rem;
   }
 `
