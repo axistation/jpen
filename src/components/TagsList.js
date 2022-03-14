@@ -30,12 +30,12 @@ const Wrapper = styled.nav`
     display: inline-block;
     color: #333;
     text-align: center;
-    padding: 0.6rem;
+    padding: 0.8rem;
     text-decoration: none;
   }
 
-  .scrollmenu a:hover {
-    background-color: #ccc;
+  .menubar a:hover {
+    background-color: #eee;
   }
 `
 

@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="navbar">
         <div className="full-width">
           <h2>
-            <Link to="/">📖 JP-EN Visual Dictionary</Link>
+            <Link to="/">🗼 JP-EN Visual Dictionary</Link>
           </h2>
         </div>
       </div>

@@ -42,7 +42,7 @@ export const query = graphql`
 
 const Wrapper = styled.main`
   h2 {
-    margin: 1rem 0;
+    margin-bottom: 1rem;
   }
 `
 

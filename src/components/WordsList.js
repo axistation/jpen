@@ -38,7 +38,6 @@ const Wrapper = styled.section`
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    margin: 1rem 0;
   }
   .card {
     color: #fff;

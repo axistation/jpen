@@ -41,11 +41,8 @@ const Wrapper = styled.nav`
     background-color: #fefefe;
     overflow: auto;
     white-space: nowrap;
-    border-top: 1px solid #dedede;
-    border-bottom: 1px solid #efefef;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    border-top: 0.2px solid #dedede;
+    border-bottom: 0.2px solid #efefef;
   }
 `
 
