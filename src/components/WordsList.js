@@ -51,6 +51,7 @@ const Wrapper = styled.section`
   }
   p {
     margin-top: 0.6rem;
+    font-size: 0.9rem;
   }
 `
 

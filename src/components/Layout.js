@@ -43,7 +43,7 @@ const Wrapper = styled.main`
   }
   a {
     text-decoration: none; /* no underline */
-    color: blue;
+    color: #333;
   }
 `
 

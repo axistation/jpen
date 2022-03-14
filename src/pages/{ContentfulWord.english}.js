@@ -65,7 +65,7 @@ export const query = graphql`
         tags
       }
       image {
-        gatsbyImageData(layout: CONSTRAINED)
+        gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
       }
     }
   }

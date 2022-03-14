@@ -33,7 +33,7 @@ export const query = graphql`
         japanese
         romaji
         image {
-          gatsbyImageData(layout: CONSTRAINED)
+          gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
         }
       }
     }

@@ -16,7 +16,7 @@ const query = graphql`
           tags
         }
         image {
-          gatsbyImageData
+          gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
         }
       }
     }
@@ -43,6 +43,9 @@ const Wrapper = styled.nav`
     white-space: nowrap;
     border-top: 1px solid #dedede;
     border-bottom: 1px solid #efefef;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
 `
 

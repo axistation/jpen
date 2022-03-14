@@ -14,7 +14,7 @@ const query = graphql`
           tags
         }
         image {
-          gatsbyImageData
+          gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
         }
       }
     }
