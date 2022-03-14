@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="navbar">
         <div className="full-width">
           <h2>
-            <Link to="/">📖 Japanese-English Visual Dictionary</Link>
+            <Link to="/">📖 JP-EN Visual Dictionary</Link>
           </h2>
         </div>
       </div>
@@ -18,15 +18,13 @@ const Navbar = () => {
 
 const Wrapper = styled.nav`
   .navbar {
-    height: 5rem;
     background: #efefef;
+    padding: 2rem 0;
   }
-  h2 {
-    line-height: 5rem;
-    vertical-align: middle;
+  h1 {
   }
   a {
-    color: #333 !important;
+    color: #333;
   }
 `
 
