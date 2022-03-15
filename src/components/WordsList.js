@@ -16,9 +16,7 @@ const WordsList = ({ words = [] }) => {
 
           const audioUrl = audio.file.url
 
-          const start = audioUrl => (
-            <audio autoPlay src={`https://${audioUrl}`} />
-          )
+          const start = () => <audio autoPlay src={`https://${audioUrl}`} />
 
           return (
             <div className="card" onClick={start}>
