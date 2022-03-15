@@ -10,12 +10,19 @@ const WordsList = ({ words = [] }) => {
     <Wrapper>
       <div className="wrapper">
         {words.map(word => {
-          const { id, english, japanese, romaji, image } = word
+          const { id, english, japanese, romaji, image, audio } = word
           const pathToImage = getImage(image)
           const slug = slugify(english, { lower: true })
+          const newAudio = new Audio(`https://${audio.file.url}`)
+
+          const start = () => {
+            newAudio.play()
+          }
+
           return (
-            <div className="card">
-              <Link key={id} to={`/${slug}`}>
+            <div className="card" onClick={start}>
+              {/*<Link key={id} to={`/${slug}`}>*/}
+              <Link key={id} to="#">
                 <GatsbyImage
                   image={pathToImage}
                   className="img"

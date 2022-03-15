@@ -67,6 +67,11 @@ export const query = graphql`
       image {
         gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
       }
+      audio {
+        file {
+          url
+        }
+      }
     }
   }
 `
