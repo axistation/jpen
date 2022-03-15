@@ -13,11 +13,12 @@ const WordsList = ({ words = [] }) => {
           const { id, english, japanese, romaji, image, audio } = word
           const pathToImage = getImage(image)
           const slug = slugify(english, { lower: true })
-          const newAudio = new Audio(`https://${audio.file.url}`)
 
-          const start = () => {
-            newAudio.play()
-          }
+          const audioUrl = audio.file.url
+
+          const start = audioUrl => (
+            <audio autoPlay src={`https://${audioUrl}`} />
+          )
 
           return (
             <div className="card" onClick={start}>
