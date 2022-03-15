@@ -22,6 +22,7 @@ const query = graphql`
           }
         }
       }
+      totalCount
     }
   }
 `
@@ -31,6 +32,7 @@ const AllWords = () => {
 
   return (
     <section className="">
+      <h2 className="center">{`All (${data.allContentfulWord.totalCount})`}</h2>
       <WordsList words={words} />
     </section>
   )

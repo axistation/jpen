@@ -5,23 +5,19 @@ import Layout from "../components/Layout"
 
 // import SEO from "../components/SEO"
 
-import styled from "styled-components"
-
 const TagTemplate = ({ data, pageContext }) => {
   const words = data.allContentfulWord.nodes
 
   return (
     <Layout>
       {/*<SEO title={pageContext.tag} />*/}
-      <Wrapper className="page">
-        <h2 className="center">
-          {`${pageContext.tag} (${data.allContentfulWord.totalCount})`}
-        </h2>
-        <p></p>
-        <div className="tag-recipes">
-          <WordsList words={words} />
-        </div>
-      </Wrapper>
+      <h2 className="center">
+        {`${pageContext.tag} (${data.allContentfulWord.totalCount})`}
+      </h2>
+      <p></p>
+      <div className="tag-recipes">
+        <WordsList words={words} />
+      </div>
     </Layout>
   )
 }
@@ -51,12 +47,6 @@ export const query = graphql`
       }
       totalCount
     }
-  }
-`
-
-const Wrapper = styled.main`
-  h2 {
-    margin-bottom: 1rem;
   }
 `
 

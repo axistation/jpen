@@ -55,6 +55,9 @@ const Wrapper = styled.main`
     top: 0;
     z-index: 99;
   }
+  h2 {
+    margin-bottom: 1rem;
+  }
 `
 
 export default Layout

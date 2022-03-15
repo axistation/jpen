@@ -24,6 +24,9 @@ const Wrapper = styled.nav`
   a {
     color: #333;
   }
+  h2 {
+    margin: 0 !important;
+  }
 `
 
 export default Navbar
