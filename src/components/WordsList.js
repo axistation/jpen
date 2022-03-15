@@ -1,37 +1,44 @@
-import React from "react"
+import React, { useRef } from "react"
 import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import slugify from "slugify"
+// import slugify from "slugify"
 
 import styled from "styled-components"
 
 const WordsList = ({ words = [] }) => {
+  const myAudio = useRef(null)
+
   return (
     <Wrapper>
       <div className="wrapper">
         {words.map(word => {
           const { id, english, japanese, romaji, image, audio } = word
           const pathToImage = getImage(image)
-          const slug = slugify(english, { lower: true })
-
           const audioUrl = audio.file.url
 
-          const start = () => <audio autoPlay src={`https://${audioUrl}`} />
+          const start = () => {
+            myAudio.current.src = `http:${audioUrl}`
+            myAudio.current.play()
+          }
 
           return (
-            <div className="card" onClick={start}>
-              {/*<Link key={id} to={`/${slug}`}>*/}
-              <Link key={id} to="#">
-                <GatsbyImage
-                  image={pathToImage}
-                  className="img"
-                  alt={english}
-                />
-                <p>
-                  <b>{english}</b> | {japanese} | {romaji}
-                </p>
-              </Link>
-            </div>
+            <>
+              <div className="card" onClick={start}>
+                <audio ref={myAudio} src={""} />
+
+                {/*<Link key={id} to={`/${slug}`}>*/}
+                <Link key={id} to="#">
+                  <GatsbyImage
+                    image={pathToImage}
+                    className="img"
+                    alt={english}
+                  />
+                  <p>
+                    <b>{english}</b> | {japanese} | {romaji}
+                  </p>
+                </Link>
+              </div>
+            </>
           )
         })}
       </div>
