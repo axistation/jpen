@@ -12,7 +12,10 @@ const Layout = ({ children }) => {
   return (
     <Wrapper>
       <Navbar />
-      <Menubar />
+      <div className="sticky">
+        <Menubar />
+      </div>
+
       <div className="full-width">
         <div className="container">
           <div>{children}</div>
@@ -45,6 +48,12 @@ const Wrapper = styled.main`
   a {
     text-decoration: none; /* no underline */
     color: #333;
+  }
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 99;
   }
 `
 

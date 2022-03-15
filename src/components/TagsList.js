@@ -16,7 +16,7 @@ const TagsList = ({ words }) => {
 
           return (
             <Link to={`/tags/${slug}`} key={index}>
-              {text} ({value})
+              {text}
             </Link>
           )
         })}
@@ -30,7 +30,7 @@ const Wrapper = styled.nav`
     display: inline-block;
     color: #333;
     text-align: center;
-    padding: 0.8rem;
+    padding: 0.6rem;
     text-decoration: none;
   }
 

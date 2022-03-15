@@ -26,10 +26,9 @@ const query = graphql`
 const Menubar = () => {
   const data = useStaticQuery(query)
   const words = data.allContentfulWord.nodes
-
   return (
     <Wrapper>
-      <div className="center menubar">
+      <div className="center menubar sticky">
         <TagsList words={words} />
       </div>
     </Wrapper>
@@ -38,11 +37,11 @@ const Menubar = () => {
 
 const Wrapper = styled.nav`
   .menubar {
-    background-color: #fefefe;
+    background-color: #fff;
     overflow: auto;
     white-space: nowrap;
-    border-top: 0.2px solid #dedede;
-    border-bottom: 0.2px solid #efefef;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #efefef;
   }
 `
 

@@ -36,8 +36,8 @@ const WordsList = ({ words = [] }) => {
 const Wrapper = styled.section`
   .wrapper {
     display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
   .card {
     color: #fff;
