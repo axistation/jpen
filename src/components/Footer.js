@@ -23,7 +23,7 @@ const Wrapper = styled.footer`
     vertical-align: middle;
   }
   a {
-    text-decoration: underline;
+    text-decoration: underline !important;
   }
 `
 export default Footer
