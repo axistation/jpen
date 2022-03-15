@@ -40,8 +40,6 @@ const Wrapper = styled.nav`
     background-color: #fff;
     overflow: auto;
     white-space: nowrap;
-    border-top: 1px solid #dedede;
-    border-bottom: 1px solid #efefef;
   }
 `
 
