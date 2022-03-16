@@ -80,7 +80,7 @@ const WordsList = ({ words = [] }) => {
             load more
           </div>
         ) : (
-          <div className="nomore">what this space</div>
+          <div className="nomore">watch this space...</div>
         )}
       </div>
     </Wrapper>
@@ -134,6 +134,10 @@ const Wrapper = styled.section`
       border-color: #1b1f2326;
       transition-duration: 0.1s;
     }
+  }
+  .nomore {
+    opacity: 0.4;
+    font-style: italic;
   }
 `
 
