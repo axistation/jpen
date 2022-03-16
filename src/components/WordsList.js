@@ -52,7 +52,7 @@ const Wrapper = styled.section`
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
   .card {
-    color: #fff;
+    color: #333;
   }
   .card:hover {
     opacity: 0.9;
