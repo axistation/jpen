@@ -77,10 +77,10 @@ const WordsList = ({ words = [] }) => {
       <div className="loadmore">
         {hasMore ? (
           <div className="btn" onClick={handleLoadMore}>
-            Load More
+            load more
           </div>
         ) : (
-          <div className="nomore">No more results</div>
+          <div className="nomore">what this space</div>
         )}
       </div>
     </Wrapper>
