@@ -26,6 +26,7 @@ const query = graphql`
     }
   }
 `
+
 const AllWords = () => {
   const data = useStaticQuery(query)
   const words = data.allContentfulWord.nodes

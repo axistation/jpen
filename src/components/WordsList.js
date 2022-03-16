@@ -23,20 +23,19 @@ const WordsList = ({ words = [] }) => {
 
           return (
             <>
-              <div className="card" onClick={start}>
+              <div className="card" onClick={start} key={id}>
                 <audio ref={myAudio} src={""} />
 
                 {/*<Link key={id} to={`/${slug}`}>*/}
-                <Link key={id} to="#">
-                  <GatsbyImage
-                    image={pathToImage}
-                    className="img"
-                    alt={english}
-                  />
-                  <p>
-                    <b>{english}</b> | {japanese} | {romaji}
-                  </p>
-                </Link>
+
+                <GatsbyImage
+                  image={pathToImage}
+                  className="img"
+                  alt={english}
+                />
+                <p>
+                  <b>{english}</b> | {japanese} | {romaji}
+                </p>
               </div>
             </>
           )
@@ -57,6 +56,7 @@ const Wrapper = styled.section`
   }
   .card:hover {
     opacity: 0.9;
+    cursor: pointer;
   }
   .img {
     width: 100%;
