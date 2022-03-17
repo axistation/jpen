@@ -81,7 +81,7 @@ const Wrapper = styled.section`
     font-size: 0.9rem;
   }
   .search-container {
-    margin: 0 0 1rem 0;
+    margin: 0 0 1.6rem 0;
     text-align: center;
   }
   input {
@@ -105,6 +105,7 @@ const Wrapper = styled.section`
       /* Microsoft Edge */
       color: #bbb;
     }
+    text-transform: none;
   }
 `
 
