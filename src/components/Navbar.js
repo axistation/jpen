@@ -19,7 +19,7 @@ const Navbar = () => {
 const Wrapper = styled.nav`
   .navbar {
     background: #efefef;
-    padding: 1rem 0;
+    padding: 0.8rem 0;
   }
   a {
     color: #333;

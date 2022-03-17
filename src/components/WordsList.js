@@ -28,8 +28,6 @@ const WordsList = ({ words = [] }) => {
     myAudio.current.play()
   }
 
-  // const handleTest = test => console.log(test)
-
   return (
     <Wrapper>
       <audio ref={myAudio} src={""} />
@@ -95,7 +93,7 @@ const Wrapper = styled.section`
   }
   input {
     width: 100%;
-    padding: 0.3rem 0.5rem;
+    padding: 1rem;
     border: 1px solid #999;
     border-radius: 0;
 

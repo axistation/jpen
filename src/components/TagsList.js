@@ -2,7 +2,7 @@ import React from "react"
 import setupTags from "../utils/setupTags"
 import { Link } from "gatsby"
 import slugify from "slugify"
-import { GrReturn } from "react-icons/gr"
+import { IoMdReturnLeft } from "react-icons/io"
 
 import styled from "styled-components"
 
@@ -13,7 +13,7 @@ const TagsList = ({ words }) => {
       <div className="menubar">
         <Link to="/">
           <div className="back">
-            <GrReturn size="0.9rem" />
+            <IoMdReturnLeft size="1.1rem" />
           </div>
         </Link>
 
@@ -37,22 +37,23 @@ const TagsList = ({ words }) => {
 const Wrapper = styled.nav`
   .menubar .rest a {
     display: inline-block;
-    color: #333;
+    color: #999;
     text-align: center;
-    padding: 0.6rem;
+    padding: 1rem 0.5rem;
     text-decoration: none;
   }
 
   .menubar a:hover,
   .back:hover {
     background-color: #eee;
+    color: #333;
   }
 
   .back {
     display: inline-block;
     background: #fff;
     position: sticky;
-    padding: 0.6rem;
+    padding: 0.8rem;
     left: 0;
   }
   .rest {
