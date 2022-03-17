@@ -86,9 +86,25 @@ const Wrapper = styled.section`
   }
   input {
     width: 100%;
-    padding: 0.2rem 0.5rem;
-    border: 1px solid #666;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid #999;
     border-radius: 0;
+
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #bbb;
+      opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #bbb;
+    }
+
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: #bbb;
+    }
   }
 `
 

@@ -56,7 +56,8 @@ const Wrapper = styled.main`
     z-index: 99;
   }
   h2 {
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
   }
 `
 
