@@ -11,9 +11,12 @@ const TagsList = ({ words }) => {
   return (
     <Wrapper>
       <div className="menubar">
-        <Link className="back" to="/">
-          <GrReturn size=".9rem" />
+        <Link to="/">
+          <div className="back">
+            <GrReturn size="0.9rem" />
+          </div>
         </Link>
+
         <div className="rest">
           {newTags.map((tag, index) => {
             const [text, value] = tag
@@ -32,7 +35,7 @@ const TagsList = ({ words }) => {
 }
 
 const Wrapper = styled.nav`
-  .menubar a {
+  .menubar .rest a {
     display: inline-block;
     color: #333;
     text-align: center;
@@ -40,12 +43,16 @@ const Wrapper = styled.nav`
     text-decoration: none;
   }
 
-  .menubar a:hover {
+  .menubar a:hover,
+  .back:hover {
     background-color: #eee;
   }
+
   .back {
+    display: inline-block;
     background: #fff;
     position: sticky;
+    padding: 0.6rem;
     left: 0;
   }
   .rest {

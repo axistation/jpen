@@ -40,16 +40,6 @@ const Wrapper = styled.nav`
     overflow: auto;
     white-space: nowrap;
   }
-  .back {
-    display: block;
-    color: #333;
-    padding: 0.6rem;
-    text-decoration: none;
-    height: 1rem;
-  }
-  .back:hover {
-    background-color: #eee;
-  }
 `
 
 export default Menubar
