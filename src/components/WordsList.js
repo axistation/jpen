@@ -6,11 +6,11 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 const WordsList = ({ words = [] }) => {
-  const [filteredWords] = useState(words)
   const [searchField, setSearchField] = useState("")
-  const myAudio = useRef(null)
 
-  const newWords = filteredWords.filter(word => {
+  const myAudio = useRef("")
+
+  const filteredWords = words.filter(word => {
     return (
       word.english.toLowerCase().includes(searchField) ||
       word.japanese.toLowerCase().includes(searchField) ||
@@ -18,40 +18,44 @@ const WordsList = ({ words = [] }) => {
     )
   })
 
+  const handleSearchChange = event => {
+    const searchField = event.target.value.toLowerCase()
+    setSearchField(searchField)
+  }
+
+  const handleAudio = url => {
+    myAudio.current.src = url
+    myAudio.current.play()
+  }
+
+  // const handleTest = test => console.log(test)
+
   return (
     <Wrapper>
+      <audio ref={myAudio} src={""} />
+
       <div className="search-container">
         <input
           className="search-box"
           type="search"
           placeholder="search english, japanese, or romaji"
-          onChange={event => {
-            const searchField = event.target.value.toLowerCase()
-            setSearchField(searchField)
-          }}
+          onChange={handleSearchChange}
         />
       </div>
 
       <div className="wrapper">
-        {newWords.map(word => {
+        {filteredWords.map(word => {
           const { id, english, japanese, romaji, image, audio } = word
 
           const pathToImage = getImage(image)
           const audioUrl = audio.file.url
 
-          const handPlayAudio = () => {
-            myAudio.current.src = `http:${audioUrl}`
-            myAudio.current.play()
-          }
-
           return (
             <div
               className="card"
-              onClick={handPlayAudio}
-              onKeyDown={handPlayAudio}
+              onClick={() => handleAudio(audio.file.url)}
               key={id}
             >
-              <audio ref={myAudio} src={""} />
               {/*<Link key={id} to={`/${slug}`}>*/}
               <GatsbyImage image={pathToImage} className="img" alt={english} />
               <p>
