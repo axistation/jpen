@@ -84,9 +84,11 @@ const Wrapper = styled.section`
     margin: 0 0 1rem 0;
     text-align: center;
   }
-  input[type="search"] {
+  input {
     width: 100%;
     padding: 0.2rem 0.5rem;
+    border: 1px solid #666;
+    border-radius: 0;
   }
 `
 

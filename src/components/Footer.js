@@ -8,9 +8,7 @@ const Footer = () => {
       <div className="footer">
         <div className="full-width center">
           &copy; {new Date().getFullYear()}{" "}
-          <Link to="/">jp-en visual dictionary</Link>. Built with{" "}
-          <a href="https://www.gatsbyjs.com/">Gatsby</a> |{" "}
-          <a href="https://reactjs.org/">React</a>
+          <Link to="/">jp-en visual dictionary</Link>
         </div>
       </div>
     </Wrapper>
