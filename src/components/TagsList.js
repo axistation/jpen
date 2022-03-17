@@ -12,7 +12,7 @@ const TagsList = ({ words }) => {
     <Wrapper>
       <div className="menubar">
         <Link className="back" to="/">
-          <GrReturn />
+          <GrReturn size=".9rem" />
         </Link>
         <div className="rest">
           {newTags.map((tag, index) => {

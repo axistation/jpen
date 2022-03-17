@@ -45,6 +45,7 @@ const Wrapper = styled.nav`
     color: #333;
     padding: 0.6rem;
     text-decoration: none;
+    height: 1rem;
   }
   .back:hover {
     background-color: #eee;
