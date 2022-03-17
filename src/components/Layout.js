@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
         <Menubar />
       </div>
 
-      <div className="full-width">
+      <div className="full-width content">
         <div className="container">
           <div>{children}</div>
         </div>

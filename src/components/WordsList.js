@@ -45,7 +45,12 @@ const WordsList = ({ words = [] }) => {
           }
 
           return (
-            <div className="card" onClick={handPlayAudio} key={id}>
+            <div
+              className="card"
+              onClick={handPlayAudio}
+              onKeyDown={handPlayAudio}
+              key={id}
+            >
               <audio ref={myAudio} src={""} />
               {/*<Link key={id} to={`/${slug}`}>*/}
               <GatsbyImage image={pathToImage} className="img" alt={english} />

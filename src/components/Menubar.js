@@ -1,7 +1,6 @@
 import React from "react"
 import TagsList from "./TagsList"
 import { graphql, useStaticQuery } from "gatsby"
-
 import styled from "styled-components"
 
 const query = graphql`
@@ -28,7 +27,7 @@ const Menubar = () => {
   const words = data.allContentfulWord.nodes
   return (
     <Wrapper>
-      <div className="center menubar sticky">
+      <div className="menubar center sticky">
         <TagsList words={words} />
       </div>
     </Wrapper>
@@ -40,6 +39,15 @@ const Wrapper = styled.nav`
     background-color: #fff;
     overflow: auto;
     white-space: nowrap;
+  }
+  .back {
+    display: block;
+    color: #333;
+    padding: 0.6rem;
+    text-decoration: none;
+  }
+  .back:hover {
+    background-color: #eee;
   }
 `
 
